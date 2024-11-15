@@ -1,0 +1,22 @@
+using System;
+
+namespace Solution {
+    class Solution {
+        static void Main(string[] args) {
+            string s1 = Console.ReadLine();
+            string s2 = Console.ReadLine();
+
+            string result = strings_xor(s1, s2);
+            Console.WriteLine(result);
+        }
+
+        static string strings_xor(string s1, string s2) {
+            char[] res = new char[s1.Length];
+            for (int i = 0; i < s1.Length; i++) {
+                // XOR the characters by checking if they are equal
+                res[i] = s1[i] == s2[i] ? '0' : '1';
+            }
+            return new string(res);
+        }
+    }
+}
